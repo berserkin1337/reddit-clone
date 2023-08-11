@@ -1,0 +1,20 @@
+version: "3"
+services:
+    postgres:
+        image: postgres:latest
+        container_name: postgres1
+        ports:
+            - "6500:5432"
+        volumes:
+            - progresDB:/var/lib/postgresql/data
+        env_file:
+            - ./.env.local
+    pgAdmin:
+        image: dpage/pgadmin4
+        container_name: pgAdmin1
+        env_file:
+            - ./.env.local
+        ports:
+            - "5050:80"
+volumes:
+    progresDB:
