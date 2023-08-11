@@ -30,7 +30,7 @@ export async function POST(req: Request) {
 		});
 
 		if (subreddit) {
-			return new Response("You cannot unsubscribe from your own subreddit", { status: 400 });
+			return new Response("Could not unsubscribe from your own subreddit", { status: 400 });
 		}
 		await db.subscription.delete({
 			where: {

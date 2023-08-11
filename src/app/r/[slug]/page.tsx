@@ -1,6 +1,6 @@
 import { getAuthSession } from "@/lib/auth";
 import { db } from "@/lib/db";
-import { INFINITE_SCROLL_PAGINATION_RESULTS } from "@/src/config";
+import { INFINITE_SCROLL_PAGINATION_RESULTS } from "@/config";
 import { notFound } from "next/navigation";
 import MiniCreatePost from "@/components/MiniCreatePost";
 
