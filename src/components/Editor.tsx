@@ -169,7 +169,7 @@ const Editor: FC<EditorProps> = ({ subredditId }) => {
 						{...rest}
 						placeholder={"Title"}
 						className={
-							"w-full resize-none appearance-none overflow-hidden bg-transparent text-5xl font-bold focus:outline-none"
+							"resize:none w-full appearance-none  overflow-hidden bg-transparent text-5xl font-bold focus:outline-none"
 						}
 					/>
 					<div id={"editor"} className={"min-h-[500px]"} />
