@@ -38,7 +38,7 @@ const Post: FC<PostProps> = ({ subredditName, post, commentAmt, votesAmt, curren
 								<span className="px-1">•</span>
 							</>
 						) : null}
-						<span>Posted by u/{post.author.name}</span> {formatTimeToNow(new Date(post.createdAt))}
+						<span>Posted by u/{post.author.username}</span> {formatTimeToNow(new Date(post.createdAt))}
 					</div>
 					<a href={`/r/${subredditName}/post/${post.id}`}>
 						<h1 className="py-2 text-lg font-semibold leading-6 text-gray-900">{post.title}</h1>

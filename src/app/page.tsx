@@ -1,12 +1,6 @@
 import { HomeIcon } from "lucide-react";
 import Link from "next/link";
-import { Button, buttonVariants } from "@/components/ui/Button";
-import { useRouter } from "next/navigation";
-import { useMutation } from "@tanstack/react-query";
-import axios from "axios";
-import { CreateSubredditPayload } from "@/lib/validators/subreddit";
-import { Simulate } from "react-dom/test-utils";
-import input = Simulate.input;
+import { buttonVariants } from "@/components/ui/Button";
 import { getAuthSession } from "@/lib/auth";
 import GeneralFeed from "@/components/GeneralFeed";
 import CustomFeed from "@/components/CustomFeed";

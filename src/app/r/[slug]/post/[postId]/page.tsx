@@ -69,7 +69,6 @@ const SubRedditPostPage = async ({ params }: SubRedditPostPageProps) => {
 
 					<EditorOutput content={post?.content ?? cachedPost.content} />
 					<Suspense fallback={<Loader2 className="h-5 w-5 animate-spin text-zinc-500" />}>
-						{/* @ts-expect-error Server Component */}
 						<CommentsSection postId={post?.id ?? cachedPost.id} />
 					</Suspense>
 				</div>
