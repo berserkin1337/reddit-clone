@@ -18,7 +18,6 @@ export async function POST(req: Request) {
 				userId: session.user.id,
 			},
 		});
-		console.log(subscription);
 		if (!subscription) {
 			return new Response("Subscribe to post", { status: 400 });
 		}
