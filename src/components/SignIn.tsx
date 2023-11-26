@@ -10,12 +10,12 @@ const SignIn: FC = ({}) => {
 				<Icons.logo className="mx-auto h-6 w-6 " />
 				<h1 className="text-center text-2xl font-semibold tracking-tight">Welcome Back</h1>
 				<p className="mx-auto max-w-xs text-sm">
-					By continuing,you are setting up a Breadit account and you agree to our User Agreement and Privacy
+					By continuing,you are setting up a Reddit account and you agree to our User Agreement and Privacy
 					Policy.
 				</p>
 				<UserAuthForm />
 				<p className={"px-8 text-center text-sm  text-zinc-700 "}>
-					New to Breadit?{" "}
+					New to Reddit?{" "}
 					<Link href={"/sign-up"} className="text-sm underline underline-offset-4  hover:text-zinc-800 ">
 						Sign Up
 					</Link>

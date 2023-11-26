@@ -22,7 +22,7 @@ const PostFeed: FC<PostFeedProps> = ({ initialPosts, subredditName }) => {
 		threshold: 1,
 	});
 	const { data: session } = useSession();
-
+	let posts = [];
 	const { data, fetchNextPage, isFetchingNextPage } = useInfiniteQuery(
 		["infinite-query"],
 		async ({ pageParam = 1 }) => {
@@ -48,7 +48,7 @@ const PostFeed: FC<PostFeedProps> = ({ initialPosts, subredditName }) => {
 		}
 	}, [entry, fetchNextPage]);
 
-	const posts = (data?.pages.flatMap((page) => page) ?? initialPosts).filter((post) => post !== undefined);
+	posts = (data?.pages.flatMap((page) => page) ?? initialPosts).filter((post) => post !== undefined);
 	// remove all the undefined values from the array
 	// this is necessary because the last page of posts will be undefined
 	// until the next page is fetched

@@ -8,6 +8,8 @@ export async function GET(req: Request) {
 	const session = await getAuthSession();
 
 	let followedCommunitiesIds: string[] = [];
+	//sleep for 1 sec
+	await new Promise((resolve) => setTimeout(resolve, 5000));
 
 	if (session) {
 		const followedCommunities = await db.subscription.findMany({
